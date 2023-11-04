@@ -1,0 +1,14 @@
+.navbar {
+  padding-left: 2rem;
+}
+
+.header-text {
+  padding-left: 2rem;
+  line-height: 60px;
+}
+
+.sidebar-slider:hover {
+  cursor: pointer;
+  transform: rotate(90deg);
+  transition: transform 0.4s ease-in-out;
+}

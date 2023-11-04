@@ -1,0 +1,44 @@
+<div *ngIf="lifts">
+  <div class="container-fluid gallery-title">
+    <h2>Exercises by muscle group</h2>
+    <h5>Find exercises that work the muscle groups you're targeting.
+    </h5>
+  </div>
+
+  <div class="container-fluid gallery-search">
+    <div class="row search-row">
+      <div class="col-sm-3">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+
+
+
+
+      <div class="col-sm-3 dropdown">
+        <select class="form-control dropdown-toggle" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          <option>Select Equipment</option>
+          <option>Bodyweight</option>
+          <option>Dumbbell</option>
+          <option>Barbell</option>
+          <option>Machine</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="container lifts-container">
+      <div class="row">
+        <div class="card col-sm-6 col-md-3" *ngFor="let lift of lifts">
+          <div class="col">
+            <h6 class="card-title">{{ lift.name | titlecase }}</h6>
+
+            <p class="card-text"><span class="card-subheader">Muscle Group: </span>{{ lift.bodyPart | titlecase }}</p>
+
+            <p class="card-text"><span class="card-subheader">Equipment: </span>{{ lift.equipment | titlecase }}</p>
+          </div>
+          <div class="col">
+            <img [src]="lift.gifUrl" alt="{{ lift.name }}" class="card-img-top" style="width: 100px; height: auto;">
+          </div>
+        </div>
+      </div>
+    </div>
