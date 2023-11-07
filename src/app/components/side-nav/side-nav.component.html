@@ -1,8 +1,17 @@
-<div class="container side-menu">
-  <ul class="mr-0">
-    <li>Profile</li>
-    <li>Workouts</li>
-    <li>Exercises</li>
-    <li>Login</li>
-  </ul>
+<div class="sidebar" (mouseleave)="closeSidebar()">
+  <div class="list-group">
+    <a href="/home">
+      <img src="assets/home.svg" alt="Home" width="50" height="50" class="filter-white">
+    </a>
+    <a href="/profile">
+      <img src="assets/user.svg" alt="Profile" width="50" height="50" class="filter-white">
+    </a>
+    <a href="/insight">
+      <img src="assets/graph.svg" alt="Progress" width="50" height="50" class="filter-white">
+    </a>
+    <a href="/login">
+      <img src="assets/logout.svg" alt="Logout" width="50" height="50" class="filter-white" *ngIf="loggedIn">
+      <img src="assets/logout.svg" alt="Login" width="50" height="50" class="filter-white" *ngIf="!loggedIn">
+    </a>
+  </div>
 </div>

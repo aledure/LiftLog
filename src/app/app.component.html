@@ -1,17 +1,17 @@
-<nav class="navbar navbar-light bg-light">
+<nav class="navbar navbar-light sticky-top">
   <a class="navbar-brand" href="#">
-    <img src="assets/dumbell.svg" alt="LiftLog Logo" width="60" height="60" class="d-inline-block align-top">
+    <img src="assets/dumbell.svg" alt="LiftLog Logo" width="60" height="60"
+      class="d-inline-block align-top filter-white">
     <span class="header-text">LiftLog</span>
   </a>
   <button class="btn" type="button">
 
-    <img src="assets/arrow.svg" alt="LiftLog Logo" width="40" height="40"
-      class="d-inline-block align-top sidebar-slider">
-
+    <img src="assets/arrow.svg" alt="LiftLog Logo" style="margin-right: 1em;" width="40" height="40"
+      class="d-inline-block align-top sidebar-slider filter-white" (mouseenter)="toggleSidebar()">
   </button>
 </nav>
 
+<app-side-nav *ngIf="sidebarOpen" (mouseleave)="closeSidebar()"></app-side-nav>
 
-<app-side-nav></app-side-nav>
 
 <router-outlet></router-outlet>

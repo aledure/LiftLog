@@ -32,4 +32,107 @@
   border-radius: 10px;
   color: white;
   font-size: 1.5rem;
+  background-color: #188E9F;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  margin-right: 1em;
+}
+
+.info-container h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.info-container p {
+  font-weight: 300;
+}
+
+.bold-text {
+  font-weight: 600;
+}
+
+.site-desc-container,
+.benefits-container {
+  display: flex;
+  flex-direction: column;
+  color: #ECEBF3;
+  height: 50vh;
+}
+
+.site-desc-container {
+  background-color: #188E9F;
+  padding: 2em;
+}
+
+
+.benefits-container {
+  padding: 1em;
+  background-color: #F75C03;
+  padding-right: 1em;
+}
+
+.benefits-container .bold-text {
+  letter-spacing: 1px;
+  padding-left: 1em;
+}
+
+
+.img-container {
+  background-image: url('/assets/barbell.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 50vh;
+}
+
+.left-img-container {
+  background-image: url('/assets/pullup.jpg');
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  width: 50vw;
+  height: 50vh;
+}
+
+.footer {
+  background-color: #0B2027;
+  color: #ECEBF3;
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-button {
+  background-color: #188E9F;
+  font-weight: 400;
+}
+
+
+
+@media screen and (max-width: 767px) {
+
+  .img-container,
+  .left-img-container {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .benefits-container,
+  .site-desc-container p {
+    font-size: 3.5vw;
+  }
+
+  .benefits-container {
+    order: -1;
+  }
 }

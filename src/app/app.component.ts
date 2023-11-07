@@ -8,10 +8,17 @@ import { ApiService } from './shared/services/api.service';
 })
 export class AppComponent {
   title = 'lift-log';
+  sidebarOpen = false;
 
   constructor(private apiService: ApiService) {
     this.apiService.getAllLifts().subscribe((data) => {
       console.log(data);
     });
+  }
+  toggleSidebar() {
+    this.sidebarOpen = !this.sidebarOpen;
+  }
+  closeSidebar() {
+    this.sidebarOpen = false;
   }
 }

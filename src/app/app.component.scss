@@ -1,14 +1,20 @@
 .navbar {
   padding-left: 2rem;
+  background-color: #0B2027;
 }
 
 .header-text {
   padding-left: 2rem;
   line-height: 60px;
+  color: #ECEBF3;
 }
 
 .sidebar-slider:hover {
   cursor: pointer;
   transform: rotate(90deg);
   transition: transform 0.4s ease-in-out;
+}
+
+.filter-white {
+  filter: invert(98%) sepia(4%) saturate(1068%) hue-rotate(191deg) brightness(96%) contrast(97%);
 }

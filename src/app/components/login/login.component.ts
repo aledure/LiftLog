@@ -6,10 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent {
-  username: string = '';
+  email: string = '';
   password: string = '';
+  passwordConfirm: string = '';
+  isLoggedIn: boolean = false;
 
   login(): void {
-    console.log(`Username: ${this.username}`);
+    console.log(`Username: ${this.email}`);
+  }
+
+  onLogin(): void {
+    this.isLoggedIn = true;
+  }
+
+  onLogout(): void {
+    this.isLoggedIn = false;
   }
 }
