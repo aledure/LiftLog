@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { ApiService } from '../../shared/services/api.service';
 import { Routine } from '../../shared/models/routine.model';
-import { Lift } from 'src/app/shared/models/lift.model';
+import { Lift } from 'app/shared/models/lift.model';
 
 @Component({
   selector: 'app-create-routine',
